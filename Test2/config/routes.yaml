@@ -1,0 +1,27 @@
+home:
+    path: /home
+    controller: App\Controller\HomeController::index
+
+ajouter:
+    path: /ajout
+    controller: App\Controller\ajouterController::index
+
+AjouterType:
+    path: /type
+    controller: App\Controller\ajouterController::AjouterType
+
+modifier:
+    path: /modifier
+    controller: App\Controller\ajouterController::index
+
+modifierType:
+    path: /mod
+    controller: App\Controller\modifierController::modifierType
+
+supprimer:
+    path: /supprimer
+    controller: App\Controller\ajouterController::index
+
+supprimerType:
+    path: /sup
+    controller: App\Controller\modifierController::supprimerType
