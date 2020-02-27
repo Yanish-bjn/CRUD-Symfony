@@ -26,11 +26,11 @@
       </nav>
       <div class="jumbotron" txt-center>
       <center><h1>Bienvenue sur la page d'accueil</h1>
-      <p>Ici vous pourrez visionner les taches à faire !</p></center>
+      <p>Ici vous pouvez visionner les taches à faire !</p></center>
       </div>
 
       <div class="container" mt-4>
-        <h1>Voici les Tache</h1>
+        <h1>Voici les Taches</h1>
         <table class='table table-striped'> {# Regroupe les informations selon les parametres suivant : le titre, la description, la date et le statut#}
               <thead>
                   <tr>
@@ -41,7 +41,7 @@
                   </tr>
               </thead>
               <tbody>{# Debut for #}
-              {% for tri in a %}{# Pour tri allant a a  #}
+              {% for tri in a %}{# Pour tri allant de a a a  #}
                  <tr>
                     <td>{{ tri.titre }}</td>{# Regroupe les informations en fonction du titre #}
                     <td></td>
@@ -53,8 +53,8 @@
                     <td></td>
                       <td></td>
                         <td><td>
-                            <a href="{{ path('tri_modifierType', {'id':tri.id}) }}" class="btn btn-secondary">Modifier</a> {# Redirection vers la page modifier#}
-                              <a href="{{ path('tri_supprimer', {'id':tri.id}) }}" class="btn btn-danger">Supprimer</a> {# Permet de supprimer une tache #}
+                            <a href="{{ path('tri_modifierType', {'id':tri.id}) }}" class="btn btn-secondary">Modifié</a> {# Redirection vers la page modifier#}
+                              <a href="{{ path('tri_supprimer', {'id':tri.id}) }}" class="btn btn-danger">Supprimé</a> {# Permet de supprimer une tache #}
                 </td>
               </tr>
             {% endfor %} {# fin du for #}

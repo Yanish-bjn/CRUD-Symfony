@@ -33,15 +33,15 @@ public function __construct(TriRepository $repository, EntityManagerInterface $m
   if(!$Tri){ //Si tri est vide alors on crée une tache //
   $Tri = new Tri();
   }
-  $form = $this->createForm(AjouterType::class, $Tri); // On envoie le formulaire qui a était créer /:
-  $form->handleRequest($request); // permet de recuperer et d'envoyer la requette //
- if ($form->isSubmitted() && $form->isValid()){ // si le formulaire est envoyer //
+  $form = $this->createForm(AjouterType::class, $Tri); // On envoie le formulaire qui a été créer/:
+  $form->handleRequest($request); // Permets de récupérer et d'envoyer la requête //
+ if ($form->isSubmitted() && $form->isValid()){ // si le formulaire est envoyé //
               $modif = $Tri->getId() !== null; //
-              $manager->persist($Tri); // Les infos entrer dans le formulaire sont recuperer //
+              $manager->persist($Tri); // Les infos entrées dans le formulaire sont récupéré //
               $manager->flush(); //On envoie les données dans la BDD //
               return $this->redirectToRoute('home'); // on redirige vers la page d'accueil //
 }
-return $this->render('Pages/ajouter.html.twig',[ // Si tri est vide alors on envoie le formulaire permettant a l'utiisateur d'entrer les données //
+return $this->render('Pages/ajouter.html.twig',[ // Si la variable tri est vide alors on envoie le formulaire permettant à l'utilisateur d'entrer les données //
     'Tri' => $Tri,
     'form' => $form->createView(),
     'ismodificated' => $Tri->getId() !== null

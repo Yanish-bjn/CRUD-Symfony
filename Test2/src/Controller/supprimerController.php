@@ -30,10 +30,10 @@ public function __construct(TriRepository $repository, EntityManagerInterface $m
 */
 
 public function supprimerType(Tri $Tri){
-  $manager = $this->getDoctrine()->getmanager(); // permet de recuperer et d'envoyer la requette //
+  $manager = $this->getDoctrine()->getmanager(); // Permets de récupérer et d'envoyer la requête //
   $manager->remove($Tri);  // On supprime l'ancienne tache //
-  $manager->flush(); // On envoie la requette dans la BDD //
-  return $this->redirectToRoute('home'); // On redirige vers la page d'accueil // 
+  $manager->flush(); // On envoie la requête dans la BDD //
+  return $this->redirectToRoute('home'); // On redirige vers la page d'accueil //
   }
 }
   ?>

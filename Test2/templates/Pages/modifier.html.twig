@@ -26,14 +26,14 @@
       </nav>
       <div class="jumbotron" txt-center>
       <center><h1>Bienvenue sur la page modifiée</h1>
-      <p>Ici vous pourrez modifier les taches à faire !</p></center>
+      <p>Ici vous pouvez modifier les taches à faire !</p></center>
       </div>
 
       <div class="container" mt-4>
         <h1>modifier une Tache</h1>
           <form action="{{ relative_path('http://localhost:8000/mod') }}" method="post" >
         {{ form_start(form) }} {# Debut du formulaire #}
-        {{ form_widget(form) }} {# Regroupe le disigne et paramettres du formaulaire  #}
+        {{ form_widget(form) }} {# Regroupe-le design et paramètres du formulaire  #}
         <button class="btn btn-primary">Modifier</button> {# Bouton permettant d'activer le form action c'est a dire de transmettre les données #}
         {{ form_end(form) }} {# Fin du formulaire #}
       </form>

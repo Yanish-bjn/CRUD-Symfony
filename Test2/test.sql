@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 23 fév. 2020 à 17:53
+-- Généré le :  jeu. 27 fév. 2020 à 17:44
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.3.5
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `tri` (
   `statut` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_publication` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `tri`
@@ -65,11 +65,7 @@ CREATE TABLE IF NOT EXISTS `tri` (
 INSERT INTO `tri` (`id`, `titre`, `description`, `statut`, `date_publication`) VALUES
 (14, 'salon', 'Ranger le canapé', '2', '14/02/2020'),
 (15, 'Cuisine', 'Nettoyer la cuisine', '3', '22/02/2020'),
-(16, 'Chambre 2', 'Ranger la chambre 2', '1', '14/02/2020'),
-(17, 'Chambre 2', 'Ranger la chambre', '1', '14/02/2020'),
-(18, 'Chambre 2', 'Ranger la chambre', '1', '17/02/2020'),
-(19, 'Chambre 2', 'Ranger la chambre', '1', '18/02/2020'),
-(21, 'Chambre 30', 'Ranger la chambre 2', '1', '14/02/2020');
+(16, 'Chambre ', 'Ranger la chambre ', '1', '14/02/2020');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
